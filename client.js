@@ -12,6 +12,17 @@ const connect = function () {
     conn.write("Name: WWJ");
   })
 
+  conn.on("connect", () => {
+    setTimeout(() => {
+      conn.write("Move: up");
+    }, 5000);
+
+  });
+
+  // conn.on("connect", () => {
+  //     conn.write("Move: up");
+  // });
+
 
   // interpret incoming data as text
   conn.setEncoding("utf8");
