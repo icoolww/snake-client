@@ -2,6 +2,16 @@ const net = require("net");
 
 const {connect} = require("./client.js");
 
+
+
+
+console.log("Connecting ...");
+connect();
+
+// Host: 165.227.47.243
+// Port: 50541
+
+
 // establishes a connection with the game server
 // const connect = function () {
 //   const conn = net.createConnection({
@@ -9,8 +19,6 @@ const {connect} = require("./client.js");
 //     port: 50541,
 //   });
 
-
-  
 //   conn.on("connect", () => {
 //     // code that does something when the connection is first established
 //     console.log("successfully connected");
@@ -22,9 +30,3 @@ const {connect} = require("./client.js");
 
 //   return conn;
 // };
-
-console.log("Connecting ...");
-connect();
-
-// Host: 165.227.47.243
-// Port: 50541
