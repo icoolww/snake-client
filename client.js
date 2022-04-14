@@ -9,15 +9,17 @@ const connect = function () {
 
   conn.on("connect", () => {
     console.log("Successfully connected to game server");
-    conn.write("Name: WWJ");
   })
+  
+  conn.setEncoding("utf8");
+  
+  conn.write("Name: WWJ");
+  // conn.on("connect", () => {
+  //   setTimeout(() => {
+  //     conn.write("Move: up");
+  //   }, 500);
 
-  conn.on("connect", () => {
-    setTimeout(() => {
-      conn.write("Move: up");
-    }, 5000);
-
-  });
+  // });
 
   // conn.on("connect", () => {
   //     conn.write("Move: up");
@@ -25,7 +27,6 @@ const connect = function () {
 
 
   // interpret incoming data as text
-  conn.setEncoding("utf8");
 
   conn.on("data", (data) => {
     // code that does something when the connection is first established
