@@ -1,6 +1,6 @@
 // const net = require("net");
 
-const {connect} = require("./client.js");
+const {connect} = require("./constant.js");
 // const {setupInput} = require("./play.js");
 
 let connection;

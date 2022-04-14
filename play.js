@@ -1,3 +1,20 @@
+
+
+const { connect } = require("./constant");
+const { setupInput } = require("./input");
+
+console.log("Connecting ...");
+connect();
+
+setupInput(connect());
+
+
+
+
+
+
+
+
 // const net = require("net");
 
 // const {connect} = require("./client.js");
@@ -46,11 +63,3 @@
 // //   return conn;
 // // };
 
-
-const { connect } = require("./client");
-const { setupInput } = require("./input");
-
-console.log("Connecting ...");
-connect();
-
-setupInput(connect());
